@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(92, 91, 91);
+    color: white;
+    font-size: 20px;
+    font-family: Arial;
+    text-align: center;
+    height: 500px;
+}
+
+nav {
+    display: inline-block;
+    line-height: 25px;
+    margin: 175px;
+}
+
+p {
+    /* display: inline-block; */
+    position: relative;
+    overflow: hidden;
+}
+
+#home {
+    margin: 35px auto;
+    width: fit-content;
+}
+
+#about {
+    margin: 35px auto;
+    width: fit-content;
+}
+
+#contact {
+    margin: 35px auto;
+    width: fit-content;
+}
+
+#faq {
+    margin: 35px auto;
+    width: fit-content;
+}
+
+p:hover {
+    cursor: pointer;
+}
+
+p::before {
+    position: absolute;
+    transform: translateX(-100%) translateY(0%);
+    width: 50%;
+    height: 100%;
+    content: "";
+    color: black;
+    background: red;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+p:hover::before {
+    transform: translateX(200%);
+}
+
+p::after {
+    position: absolute;
+    transform: translateX(0%) translateY(90%);
+    width: 50%;
+    height: 100%;
+    content: "";
+    color: black;
+    background: red;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+    z-index: -1;
+
+}
+
+p:hover::after {
+    transform: translateX(-300%) translateY(90%);
+}
